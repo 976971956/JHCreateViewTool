@@ -193,4 +193,11 @@
     };
     
 }
+-(UIImageView *(^)(CGFloat))JH_cornerRadius_sytle{
+    return ^(CGFloat radius){
+        self.layer.cornerRadius = radius;
+        self.layer.masksToBounds = YES;
+        return self;
+    };
+}
 @end

@@ -37,7 +37,8 @@
 /// NSString
 - (UIButton *(^)(NSString *))JH_selectImage_String;
 
-
+/// 设置选中状态  参数1：BOOL
+- (UIButton *(^)(BOOL))JH_selected;
 #pragma mark --基本属性
 ///CGRect
 - (UIButton *(^)(CGRect frame))JH_frame;
@@ -55,5 +56,7 @@
 - (UIButton *(^)(CGFloat))JH_cornerRadius;
 ///设置多个圆角 参数1：上左 参数2：上右 参数3：下左 参数4：下右 参数5 ：圆角大小
 - (UIButton *(^)(BOOL,BOOL,BOOL,BOOL,CGFloat))JH_cornerRadius_tlbr;
+///设置默认倒圆角 参数1：CGFoat
+- (UIButton *(^)(CGFloat))JH_cornerRadius_sytle;
 @end
 

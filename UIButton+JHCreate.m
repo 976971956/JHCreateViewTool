@@ -85,7 +85,12 @@
         return self;
     };
 }
-
+-(UIButton *(^)(BOOL))JH_selected{
+    return ^(BOOL select){
+        self.selected = select;
+        return self;
+    };
+}
 #pragma mark --基本属性
 - (UIButton * _Nonnull (^)(CGRect))JH_frame{
     return ^(CGRect frame){
@@ -253,5 +258,12 @@
         return self;
     };
     
+}
+-(UIButton *(^)(CGFloat))JH_cornerRadius_sytle{
+    return ^(CGFloat radius){
+        self.layer.cornerRadius = radius;
+        self.layer.masksToBounds = YES;
+        return self;
+    };
 }
 @end

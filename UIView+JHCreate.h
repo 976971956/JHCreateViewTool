@@ -57,7 +57,8 @@ typedef NS_ENUM(NSInteger , JHShadowPathType) {
  参数9：BOOL
 */
 - (UIView *(^)(UIColor *,CGFloat,CGFloat ,CGFloat,BOOL,BOOL,BOOL,BOOL))JH_shadowRadius_tlbr;
-
+///设置默认倒圆角 参数1：CGFoat
+- (UIView *(^)(CGFloat))JH_cornerRadius_sytle;
 
 @end
 

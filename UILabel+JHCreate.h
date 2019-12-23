@@ -82,5 +82,7 @@
 - (UILabel *(^)(CGFloat))JH_cornerRadius;
 ///设置多个圆角 参数1：上左 参数2：上右 参数3：下左 参数4：下右 参数5 ：圆角大小
 - (UILabel *(^)(BOOL,BOOL,BOOL,BOOL,CGFloat))JH_cornerRadius_tlbr;
+///设置默认倒圆角 参数1：CGFoat
+- (UILabel *(^)(CGFloat))JH_cornerRadius_sytle;
 @end
 
