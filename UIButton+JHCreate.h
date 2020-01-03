@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-
+typedef NS_ENUM(NSUInteger, JHButtoniImageEdgeInsetsStyle) {
+    ///图片左边,文字右边
+    JHButtonEdgeInsetsStyleLeft,
+    ///图片下面,文字上面
+    JHButtonEdgeInsetsStyleBottom,
+    ///图片右边,文字左边
+    JHButtonEdgeInsetsStyleRight,
+    ///图片上面,文字下面
+    JHButtonEdgeInsetsStyleTop
+};
 @interface UIButton (JHCreate)
 /// CGFloat
 - (UIButton *(^)(CGFloat))JH_font;
@@ -39,6 +48,14 @@
 
 /// 设置选中状态  参数1：BOOL
 - (UIButton *(^)(BOOL))JH_selected;
+/**
+*  设置button的titleLabel和imageView的布局样式，及间距
+*
+*参数1：style titleLabel和imageView的布局样式
+* 参数2： space titleLabel和imageView的间距
+*/
+- (UIButton *(^)(JHButtoniImageEdgeInsetsStyle,CGFloat))JH_layoutButtonWithEdgeInsetsStyle;
+- (UIButton *(^)(UIColor*))JH_tintColor;
 #pragma mark --基本属性
 ///CGRect
 - (UIButton *(^)(CGRect frame))JH_frame;
