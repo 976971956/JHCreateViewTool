@@ -127,25 +127,25 @@
          MKButtonEdgeInsetsStyleRight // image在右，label在左
          */
         switch (style) {
-            case MKButtonEdgeInsetsStyleTop:
+            case JHButtonEdgeInsetsStyleTop:
             {
                 imageEdgeInsets = UIEdgeInsetsMake(-labelHeight-space/2.0, 0, 0, -labelWidth);
                 labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith, -imageHeight-space/2.0, 0);
             }
                 break;
-            case MKButtonEdgeInsetsStyleLeft:
+            case JHButtonEdgeInsetsStyleLeft:
             {
                 imageEdgeInsets = UIEdgeInsetsMake(0, -space/2.0, 0, space/2.0);
                 labelEdgeInsets = UIEdgeInsetsMake(0, space/2.0, 0, -space/2.0);
             }
                 break;
-            case MKButtonEdgeInsetsStyleBottom:
+            case JHButtonEdgeInsetsStyleBottom:
             {
                 imageEdgeInsets = UIEdgeInsetsMake(0, 0, -labelHeight-space/2.0, -labelWidth);
                 labelEdgeInsets = UIEdgeInsetsMake(-imageHeight-space/2.0, -imageWith, 0, 0);
             }
                 break;
-            case MKButtonEdgeInsetsStyleRight:
+            case JHButtonEdgeInsetsStyleRight:
             {
                 imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth+space/2.0, 0, -labelWidth-space/2.0);
                 labelEdgeInsets = UIEdgeInsetsMake(0, -imageWith-space/2.0, 0, imageWith+space/2.0);
@@ -154,7 +154,7 @@
             default:
                 break;
         }
-        
+
         // 4. 赋值
         self.titleEdgeInsets = labelEdgeInsets;
         self.imageEdgeInsets = imageEdgeInsets;
